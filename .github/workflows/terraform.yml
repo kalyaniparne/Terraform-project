@@ -76,7 +76,7 @@ jobs:
     - name: configure aws credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
-        role-to-assume: arn:aws:sso:::instance/ssoins-7201a7d6ca7f831d
+        role-to-assume: arn:aws:sso:::instance/ssoins-7201a7d6ca7f831d:role:Terraform-project
         aws-region: ap-south-2
 
     - name: verify aws identity
