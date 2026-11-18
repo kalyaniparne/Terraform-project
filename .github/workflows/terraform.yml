@@ -74,6 +74,12 @@ jobs:
      # with:
       #  cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
+    - name: Show workflow context
+      run: |
+        echo "repo=$GITHUB_REPOSITORY"
+        echo "ref=$GITHUB_REF"
+        echo "event=$GITHUB_EVENT_NAME"
+
     - name: configure aws credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
